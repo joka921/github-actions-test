@@ -2,5 +2,5 @@
 
 
 int main() {
-return covered(3);
+return covered(3) + uncovered(4);
 }

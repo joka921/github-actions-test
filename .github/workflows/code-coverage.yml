@@ -42,6 +42,7 @@ jobs:
         submodules: "recursive"
 
     - name: Install dependencies
+      if: false
       uses: ./.github/workflows/install-dependencies-ubuntu
     - name: Install compiler
       uses: ./.github/workflows/install-compiler-ubuntu

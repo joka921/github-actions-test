@@ -71,13 +71,15 @@ jobs:
           ref: ${{env.original_github_ref}}
           path: qlever-source
       - name: "Move qlever sources up"
-        run: mv qlever-source/* .
+        run: pwd && shopt -s dotglob && mv qlever-source/* .
+      - name: "move coverage file down"
+        run: mkdir build && mkdir build/test && mv coverage.lcov build/test
       - name: "show files"
         run: ls -l src/
       - name: "Upload coverage report"
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
-          files: coverage.lcov
+          files: ${{github.workspace}}/build/testcoverage.lcov
           # Note: technically, a `token` is not required for codecov.io when
           # uploading from a public repository, but specifying it avoids the
           # nasty spurious failures due to Github's rate limit for codecov's

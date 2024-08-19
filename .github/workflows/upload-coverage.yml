@@ -75,9 +75,9 @@ jobs:
       - name: "show files"
         run: ls -l src/
       - name: "Upload coverage report"
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v3
         with:
-          file: coverage.lcov
+          files: coverage.lcov
           # Note: technically, a `token` is not required for codecov.io when
           # uploading from a public repository, but specifying it avoids the
           # nasty spurious failures due to Github's rate limit for codecov's

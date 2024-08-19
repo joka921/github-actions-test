@@ -72,6 +72,8 @@ jobs:
           path: qlever-source
       - name: "Move qlever sources up"
         run: mv qlever-source/* .
+      - name: "show files"
+        run: ls -l src/
       - name: "Upload coverage report"
         uses: codecov/codecov-action@v4
         with:
@@ -89,3 +91,4 @@ jobs:
           override_build: ${{github.event.workflow_run.workflow_id}}
           override_commit: ${{github.event.workflow_run.head_commit.id}}
           override_pr: ${{env.pr_number}}
+          verbose: true

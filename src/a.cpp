@@ -1,8 +1,10 @@
 #include "./a.h"
 int covered(int x) {
-  return x * 3;
+auto res = x * 3;
+return res;
 }
 
 int uncovered(int x) {
-  return x * 3;
+  auto res = x * 3;
+  return res;
 }

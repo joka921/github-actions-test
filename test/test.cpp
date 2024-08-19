@@ -1,4 +1,4 @@
-#include "./a.h"
+#include "../src//a.h"
 
 
 int main() {

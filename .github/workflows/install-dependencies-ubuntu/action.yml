@@ -12,6 +12,7 @@ runs:
   steps:
     - name: Free Disk Space (Ubuntu)
       uses: jlumbroso/free-disk-space@main
+      if: false
       with:
           # this might remove tools that are actually needed,
           # if set to "true" but frees about 6 GB

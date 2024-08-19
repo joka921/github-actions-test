@@ -2,5 +2,6 @@
 
 
 int main() {
-return covered(3) != 9;
+auto invalid = (uncovered(3) != 9) || (covered(3) != 9);
+return invalid;
 }

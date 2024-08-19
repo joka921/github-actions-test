@@ -73,6 +73,7 @@ jobs:
       - name: "Move qlever sources up"
         run: pwd && shopt -s dotglob && mv qlever-source/* .
       - name: "move coverage file down"
+        if: false
         run: mkdir build && mkdir build/test && mv coverage.lcov build/test
       - name: "show files"
         run: ls -l src/
